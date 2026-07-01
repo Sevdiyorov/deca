@@ -4,9 +4,9 @@ let currentView = 'landing';
 // Render funksiyalari
 function renderLanding() {
   return `
-    <div class="min-h-screen flex flex-col">
-      <header class="px-4 pt-4 pb-2">
-        <div class="max-w-3xl mx-auto clay px-4 h-14 flex items-center justify-between">
+    <div class="mobile-shell min-h-screen flex flex-col">
+      <header class="sticky-header px-2 pt-2 pb-1 sm:px-4 sm:pt-4 sm:pb-2">
+        <div class="max-w-3xl mx-auto clay px-3 h-14 sm:px-4 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <img src="images/bird-logo.png" alt="Deca" class="h-10 w-10 object-contain" />
             <span class="text-lg font-extrabold text-neutral-800">Deca</span>
@@ -18,17 +18,17 @@ function renderLanding() {
           </div>
         </div>
       </header>
-      <section class="flex-1 flex items-center justify-center px-4 py-2">
+      <section class="flex-1 flex items-center justify-center px-2 py-2 sm:px-4">
         <div class="max-w-xl mx-auto text-center">
-          <img src="images/bird-mascot.png" alt="Deca" class="w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-4" />
-          <h1 class="text-3xl sm:text-5xl font-extrabold text-neutral-800 mb-6 leading-tight">Deca</h1>
+          <img src="images/bird-mascot.png" alt="Deca" class="w-40 h-40 sm:w-56 sm:h-56 mx-auto mb-5" />
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-neutral-800 mb-7 leading-tight">Deca</h1>
           <div class="flex justify-center">
-            <button onclick="setView('projects')" class="clay-btn text-neutral-900 font-bold px-8 py-3.5">📁 Проекты</button>
+            <button onclick="setView('projects')" class="clay-btn text-neutral-900 font-bold px-10 py-4 sm:px-12 sm:py-4.5">📁 Проекты</button>
           </div>
         </div>
       </section>
-      <footer class="px-4 pb-2 sm:pb-4 pt-2">
-        <div class="max-w-3xl mx-auto clay p-5">
+      <footer class="sticky-footer px-2 pb-2 sm:px-4 sm:pb-4 pt-1">
+        <div class="max-w-3xl mx-auto clay px-4 py-3 sm:p-5">
           <p class="text-[11px] text-neutral-400 text-center">© 2026 Deca · we will open soon</p>
         </div>
       </footer>
@@ -49,9 +49,9 @@ function renderProjects() {
   `).join('');
 
   return `
-    <div class="min-h-screen flex flex-col">
-      <header class="px-4 pt-4 pb-2 shrink-0">
-        <div class="max-w-3xl mx-auto clay px-4 h-14 flex items-center justify-between">
+    <div class="mobile-shell min-h-screen flex flex-col">
+      <header class="sticky-header px-2 pt-2 pb-1 sm:px-4 sm:pt-4 sm:pb-2 shrink-0">
+        <div class="max-w-3xl mx-auto clay px-3 h-14 sm:px-4 flex items-center justify-between">
           <button onclick="setView('landing')" class="flex items-center gap-2 hover:opacity-70 transition">
             <img src="images/bird-logo.png" alt="Deca" class="h-10 w-10 object-contain" />
             <span class="text-lg font-extrabold text-neutral-800">Deca</span>
@@ -59,12 +59,17 @@ function renderProjects() {
           <button onclick="setView('landing')" class="clay-ghost-btn text-sm font-semibold text-neutral-600 px-4 py-2">← Назад</button>
         </div>
       </header>
-      <div class="text-center px-4 pt-2 pb-4 shrink-0" style="background: none;">
+      <div class="text-center px-2 pt-2 pb-3 sm:px-4 shrink-0" style="background: none;">
         <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-800">Проекты</h1>
       </div>
-      <main class="flex-1 overflow-y-auto px-4 pb-8">
+      <main class="flex-1 overflow-y-auto px-2 pb-8 sm:px-4">
         <div class="max-w-3xl mx-auto grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-4">${projectCards}</div>
       </main>
+      <footer class="sticky-footer px-2 pb-2 sm:px-4 sm:pb-4 pt-1">
+        <div class="max-w-3xl mx-auto clay px-4 py-3 sm:p-5">
+          <p class="text-[11px] text-neutral-400 text-center">© 2026 Deca · we will open soon</p>
+        </div>
+      </footer>
     </div>
   `;
 }
