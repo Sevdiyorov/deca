@@ -1,18 +1,20 @@
-# 🚀 DECA — Coming Soon
+# 🚀 DECA — Digital Ecosystem for Central Asia
 
-> **Modern IT Brand from Uzbekistan**
+> *Building the future of technology in Central Asia.*
 
-Welcome to the **DECA** website repository — my personal brand and future IT company. This is where I showcase my web development work, projects, and everything frontend-related.
+Welcome to the official repository of **DECA** — a modern IT brand and future technology company based in Uzbekistan. This is where I build digital products, web experiences, and tools that empower the next generation of innovators in Central Asia.
 
 🔗 **Website:** [deca.uz](https://deca.uz)
-
 ---
 
-## 📌 About the Project
+## 📌 About DECA
 
-**DECA** stands for:
-- My personal brand as a frontend developer
-- A portfolio and online presence
-- A future IT company based in Uzbekistan
+**DECA** stands for **Digital Ecosystem for Central Asia**.
 
-The site is currently under construction, but something awesome is on the way.
+My mission is to create a digital ecosystem that connects people, businesses, and technologies across the region. This is more than a portfolio — it's the beginning of a movement.
+
+**What DECA represents:**
+- A personal brand built on quality and vision
+- A portfolio of real-world web development projects
+- The foundation of a future IT company based in Uzbekistan
+- A commitment to digital growth in Central Asia

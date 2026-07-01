@@ -1,22 +1,14 @@
-// State management
+// Holat boshqaruvi
 let currentView = 'landing';
 
-const projects = [
-  {
-    title: "Deca",
-    url: "https://deca.uz",
-    img: "images/bird-logo.png"
-  },
-];
-
-// Render functions
+// Render funksiyalari
 function renderLanding() {
   return `
     <div class="min-h-screen flex flex-col">
-      <header class="px-4 pt-1">
+      <header class="px-4 pt-4 pb-2">
         <div class="max-w-3xl mx-auto clay px-4 h-14 flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <img src="images/bird-logo.png" alt="Deca" class="h-8 w-8 object-contain" />
+            <img src="images/bird-logo.png" alt="Deca" class="h-10 w-10 object-contain" />
             <span class="text-lg font-extrabold text-neutral-800">Deca</span>
           </div>
           <div class="flex items-center gap-2">
@@ -28,14 +20,14 @@ function renderLanding() {
       </header>
       <section class="flex-1 flex items-center justify-center px-4 py-2">
         <div class="max-w-xl mx-auto text-center">
-          <img src="images/bird-mascot.png" alt="Deca" class="w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-4 float-anim fade-in" style="animation-delay: 0s" />
-          <h1 class="text-3xl sm:text-5xl font-extrabold text-neutral-800 mb-6 leading-tight slide-up" style="animation-delay: 0.1s">Deca</h1>
-          <div class="flex justify-center slide-up" style="animation-delay: 0.2s">
+          <img src="images/bird-mascot.png" alt="Deca" class="w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-4" />
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-neutral-800 mb-6 leading-tight">Deca</h1>
+          <div class="flex justify-center">
             <button onclick="setView('projects')" class="clay-btn text-neutral-900 font-bold px-8 py-3.5">📁 Проекты</button>
           </div>
         </div>
       </section>
-      <footer class="px-4 pb-4 pt-2">
+      <footer class="px-4 pb-2 sm:pb-4 pt-2">
         <div class="max-w-3xl mx-auto clay p-5">
           <p class="text-[11px] text-neutral-400 text-center">© 2026 Deca · we will open soon</p>
         </div>
@@ -46,9 +38,9 @@ function renderLanding() {
 
 function renderProjects() {
   const projectCards = projects.map((p, i) => `
-    <a href="${p.url}" target="_blank" rel="noreferrer" class="flex flex-col items-center gap-2 group" style="animation: fadeInUp 0.3s ease ${i * 0.05}s both">
-      <div class="clay-sm p-1.5 w-full transition group-hover:-translate-y-1 group-active:scale-95" style="border: none;">
-        <div class="aspect-square w-full overflow-hidden rounded-2xl bg-neutral-100">
+    <a href="${p.url}" target="_blank" rel="noreferrer" class="flex flex-col items-center gap-2 group">
+      <div class="p-0.5 w-full transition group-active:scale-95 rounded-2xl" style="box-shadow: none; border: 1px solid #000000; background: rgba(255,255,255,0.9);">
+        <div class="p-1 aspect-square w-full overflow-hidden rounded-2xl bg-neutral-100">
           <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover" draggable="false" />
         </div>
       </div>
@@ -61,13 +53,13 @@ function renderProjects() {
       <header class="px-4 pt-4 pb-2 shrink-0">
         <div class="max-w-3xl mx-auto clay px-4 h-14 flex items-center justify-between">
           <button onclick="setView('landing')" class="flex items-center gap-2 hover:opacity-70 transition">
-            <img src="images/bird-logo.png" alt="Deca" class="h-8 w-8 object-contain" />
+            <img src="images/bird-logo.png" alt="Deca" class="h-10 w-10 object-contain" />
             <span class="text-lg font-extrabold text-neutral-800">Deca</span>
           </button>
           <button onclick="setView('landing')" class="clay-ghost-btn text-sm font-semibold text-neutral-600 px-4 py-2">← Назад</button>
         </div>
       </header>
-      <div class="text-center px-4 pt-2 pb-4 shrink-0">
+      <div class="text-center px-4 pt-2 pb-4 shrink-0" style="background: none;">
         <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-800">Проекты</h1>
       </div>
       <main class="flex-1 overflow-y-auto px-4 pb-8">
@@ -77,13 +69,13 @@ function renderProjects() {
   `;
 }
 
-// Event handlers
+// Hodisa ishlovchilari
 function setView(view) {
   currentView = view;
   render();
 }
 
-// Main render function
+// Asosiy render funksiyasi
 function render() {
   const app = document.getElementById('app');
   if (currentView === 'landing') {
@@ -93,51 +85,16 @@ function render() {
   }
 }
 
-// Add animation keyframes
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Initial animation for landing page elements */
-  .fade-in {
-    animation: fadeIn 0.5s ease forwards;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .slide-up {
-    animation: slideUp 0.5s ease forwards;
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`;
-document.head.appendChild(style);
-
-// Block context menu and copy prevention
+// Nusxa olishni bloklash
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('cut', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  const blockedKeys = ['c', 'x', 'v', 'a'];
+  if ((e.ctrlKey || e.metaKey) && blockedKeys.includes(e.key.toLowerCase())) {
+    e.preventDefault();
+  }
+});
 
-// Initial render
 render();
