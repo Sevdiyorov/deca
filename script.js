@@ -60,7 +60,7 @@ function renderProjects() {
         </div>
       </header>
       <div class="text-center px-2 pt-2 pb-3 sm:px-4 shrink-0" style="background: none;">
-        <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-800">Проекты</h1>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-800">Projects</h1>
       </div>
       <main class="flex-1 overflow-y-auto px-2 pb-8 sm:px-4">
         <div class="max-w-3xl mx-auto grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-4">${projectCards}</div>
