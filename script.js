@@ -23,7 +23,7 @@ function renderLanding() {
           <img src="images/bird-mascot.png" alt="Deca" class="w-56 h-56 sm:w-32 sm:h-32 mx-auto mb-5" />
           <h1 class="text-4xl sm:text-6xl font-extrabold text-neutral-800 mb-7 leading-tight">Deca</h1>
           <div class="flex justify-center">
-            <button onclick="setView('projects')" class="clay-btn text-neutral-900 font-bold px-10 py-4 sm:px-12 sm:py-4.5">📁 Проекты</button>
+            <button onclick="setView('projects')" class="clay-btn text-neutral-900 font-bold px-10 py-4 sm:px-12 sm:py-4.5">📁 Projects</button>
           </div>
         </div>
       </section>
