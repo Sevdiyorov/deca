@@ -56,7 +56,7 @@ function renderProjects() {
             <img src="images/bird-logo.png" alt="Deca" class="h-10 w-10 object-contain" />
             <span class="text-lg font-extrabold text-neutral-800">Deca</span>
           </button>
-          <button onclick="setView('landing')" class="clay-ghost-btn text-sm font-semibold text-neutral-600 px-4 py-2">← Назад</button>
+          <button onclick="setView('landing')" class="clay-ghost-btn text-sm font-semibold text-neutral-600 px-4 py-2">← BACK</button>
         </div>
       </header>
       <div class="text-center px-2 pt-2 pb-3 sm:px-4 shrink-0" style="background: none;">
