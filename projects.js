@@ -1,7 +1,7 @@
 const projects = [
   {
-    title: "Vocal",
-    url: "https://vocal.deca.uz",
-    img: "https://raw.githubusercontent.com/Sevdiyorov/Vocal/main/public/icon-192.png"
+    title: "Spotify X Deca",
+    url: "https://sxd.deca.uz",
+    img: "https://raw.githubusercontent.com/Sevdiyorov/Vocal/main/public/icon-512.png"
   },
 ];
